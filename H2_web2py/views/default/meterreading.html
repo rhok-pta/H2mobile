@@ -1,0 +1,20 @@
+{{extend 'layout.html'}}
+</head>
+<body>
+    <table>
+    <tr>
+        <td>Meter Number</td>
+        <td>Reading Date</td>
+        <td>Meter Reading</td>
+        <td>Meter Reader</td>
+    </tr>
+    {{for doc in message:}}<tr>
+        <td>{{=doc.key['meterno']}}</td>
+        <td>{{=doc.key['readingdate']}}</td>
+        <td>{{=doc.key['meterreading']}}</td>
+        <td>{{=doc.key['username']}}</td>
+    </tr>{{pass}}
+    </table>
+</body>
+</html>
+
