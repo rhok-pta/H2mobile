@@ -118,9 +118,9 @@ def meterreadingform():
                       }
                   }''' % (meternofilter,request.vars['startdate'],request.vars['enddate'])
         if(request.vars.get('csv',False)): 
-            form =XML(form) + XML( TABLE(renderCSV(getDocsByMap(map_fun),["meterno","meterreading","readingdate"])))
+            form =XML(form) + XML( "<table class='imagetable'>"+(renderCSV(getDocsByMap(map_fun),["meterno","meterreading","readingdate"]))+"</table>")
         else:
-            form =XML(form) + XML( TABLE(renderDocs(getDocsByMap(map_fun),["meterno","meterreading","readingdate"])))
+            form =XML(form) + XML( "<table class='imagetable'>"+(renderDocs(getDocsByMap(map_fun),["meterno","meterreading","readingdate"]))+"</table>")
 
     elif form.errors:
         response.flash="form is invalid"
@@ -150,9 +150,9 @@ def meteruserform():
                       }
                   }''' % (meternofilter, userfilter)
         if(request.vars.get('csv',False)): 
-            form =XML(form) + XML( TABLE(renderCSV(getDocsByMap(map_fun),["username","meterno"])))
+            form =XML(form) + XML( "<table class='imagetable'>"+(renderCSV(getDocsByMap(map_fun),["username","meterno"]))+"</table>")
         else:
-            form =XML(form) + XML( TABLE(renderDocs(getDocsByMap(map_fun),["username","meterno"])))
+            form =XML(form) + XML( "<table class='imagetable'>"+(renderDocs(getDocsByMap(map_fun),["username","meterno"]))+"</table>")
 
     elif form.errors:
         response.flash="form is invalid"
@@ -190,7 +190,7 @@ def areasform():
     r = "<tr><th>Area Name</th><th>Action</th></tr>"
     for d in docs:
         r+="<tr><td>"+str(d.value['areaname']) +"</td><td>"+str(FORM(INPUT(_type="hidden",_name="areaname", _value=str(d.value['areaname'])),INPUT(_type="hidden",_name="action", _value="delete"),INPUT(_type="submit",_value="Delete"))) + "</td></tr>"
-    form =  XML( TABLE(XML(r))) +BR()+ XML(form)
+    form =  XML( "<table class='imagetable'>"+(XML(r))+"</table>") +BR()+ XML(form)
 
     return dict(form=XML(form))
 
@@ -224,7 +224,7 @@ def monitorform():
     r = "<tr><th>Monitor Name</th><th>Action</th></tr>"
     for d in docs:
         r+="<tr><td>"+str(d.value['username']) +"</td><td>"+str(FORM(INPUT(_type="hidden",_name="monitor", _value=str(d.value['username'])),INPUT(_type="hidden",_name="action", _value="delete"),INPUT(_type="submit",_value="Delete"))) + "</td></tr>"
-    form =  XML( TABLE(XML(r))) +BR()+ XML(form)
+    form =  XML( "<table class='imagetable'>"+(XML(r))+"</table>") +BR()+ XML(form)
 
     return dict(form=XML(form))
 
@@ -274,7 +274,7 @@ def tapmonitorform():
                      INPUT(_type="hidden",_name="tap", _value=d.value['tapid']),
                      INPUT(_type="hidden",_name="action", _value="delete"),
                      INPUT(_type="submit",_value="Delete"))) + "</td></tr>"
-    form =  XML( TABLE(XML(r))) +BR()+ XML(form)
+    form =  XML( "<table class='imagetable'>"+(XML(r))+"</table>") +BR()+ XML(form)
 
     return dict(form=XML(form))
 
@@ -324,7 +324,7 @@ def problemstatusform():
                       }
                   }''' % (monitorfilter,areafilter,statusfilter,request.vars['startdate'],request.vars['enddate'])
         if(request.vars.get('csv',False)): 
-            form =XML(form) + XML( TABLE(renderCSV(getDocsByMap(map_fun),["status","reportdate","area","username","tapid","problem","comments"])))
+            form =XML(form) + XML( "<table class='imagetable'>"+(renderCSV(getDocsByMap(map_fun),["status","reportdate","area","username","tapid","problem","comments"]))+"</table>")
         else:
             docs = getDocsByMap(map_fun)
             fields = ["status","reportdate","area","username","tapid","problem","comments"] 
@@ -338,7 +338,7 @@ def problemstatusform():
                                   XML("<input type='hidden' name='doc_id' value=\"%s\"/>" % d.value['_id']),
                                   XML("".join(["<input type='hidden' name='%s' value=\"%s\"/>" % (k,request.vars[k]) for k in request.vars.keys() if k in ('startdate','enddate','monitor','areaf','statusf')]))))
                 r+="</td></tr>"
-            form =XML(form) + BR() + XML( TABLE(XML(r)))
+            form =XML(form) + BR() + XML( "<table class='imagetable'>"+(XML(r))+"</table>")
     #show the update screen
     elif request.vars.get('action','')=='update':
         form=FORM(INPUT(_type="hidden",_name='action',_value="updateandshow"),

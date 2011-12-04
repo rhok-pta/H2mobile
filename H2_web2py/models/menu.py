@@ -23,6 +23,6 @@ response.google_analytics_id = None
 #########################################################################
 
 response.menu = [
-    (T('H2read'), True, URL('default','index'), [(T('Records Captured'), True, URL('default','meterreadingform')),(T('Meter Reader'), True, URL('default','meteruserform'))]),
-    (T('H2flow'), False, URL('default','index'), [(T('Captured Tap Status'), True, URL('default','problemstatusform')),(T('Tap Monitor'), True, URL('default','tapmonitorform')),(T('Areas'), True, URL('default','areasform')),(T('Monitors'), True, URL('default','monitorform'))])
+    (T('H2 Read'), False, URL('default','index'), [(T('-Records Captured'), True, URL('default','meterreadingform')),(T('-Meter Reader'), True, URL('default','meteruserform'))]),
+    (T('H2 Flow'), False, URL('default','index'), [(('-Tap Status'), True, URL('default','problemstatusform')),(T('-Tap Monitor'), True, URL('default','tapmonitorform')),(T('-Areas'), True, URL('default','areasform')),(T('-Monitors'), True, URL('default','monitorform'))])
     ]
