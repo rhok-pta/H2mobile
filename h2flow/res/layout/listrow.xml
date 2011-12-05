@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/status_list"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:stretchColumns= "1"
+  
+  >
+  <TextView
+  			android:id= "@+id/area_name" 
+  			android:layout_width ="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:padding="5dp"
+  			android:text="My Area"
+  			android:textStyle="bold"/>
+ <TextView
+  			android:id= "@+id/empty_space" 
+  			android:layout_width ="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:padding="5dp"
+  			android:text=""/>
+ <TableRow>
+  	<TextView
+  			android:id= "@+id/tap_name" 
+  			android:layout_width ="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:padding="5dp"
+  			android:textStyle="bold"
+  			android:text="School"/>
+    	<ImageView
+	        android:id="@+id/level"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:padding="5dp"
+	        android:src="@drawable/high"/>
+  			
+  	<ImageView
+	        android:id="@+id/status"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="right"
+	        android:padding="5dp"
+	        android:src="@drawable/pending"/>
+
+</TableRow> 
+ <TableRow>
+    <TextView
+    	 android:id="@+id/tap_problem"
+    	 android:layout_width ="wrap_content"
+  		 android:layout_height="wrap_content"
+  		 android:padding="5dp"
+  		 android:text="Leaking"/>
+   	<TextView 
+   			android:id="@+id/report_date"
+   			android:layout_width ="wrap_content"
+   			android:gravity="right"
+   			android:padding="5dp"
+  			android:layout_height="wrap_content"
+  			android:text=""/>
+  	<TextView 
+   			android:id="@+id/date_textview"
+   			android:layout_width ="wrap_content"
+   			android:gravity="right"
+   			android:padding="5dp"
+  			android:layout_height="wrap_content"
+  			android:text="2011-12-04"/>
+</TableRow>
+
+<TableRow>
+  	<TextView
+  			android:id= "@+id/tap_name1" 
+  			android:layout_width ="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:padding="5dp"
+  			android:textStyle="bold"
+  			android:text="Gogo's Place"/>
+    	<ImageView
+	        android:id="@+id/level1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:padding="5dp"
+	        android:src="@drawable/low"/>
+  			
+  	<ImageView
+	        android:id="@+id/status1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="right"
+	        android:padding="5dp"
+	        android:src="@drawable/resolved"/>
+  </TableRow>
+  <TableRow>
+    <TextView
+    	 android:id="@+id/tap_problem1"
+    	 android:layout_width ="wrap_content"
+  		 android:layout_height="wrap_content"
+  		 android:padding="5dp"
+  		 android:text="No Water"/>
+   	<TextView 
+   			android:id="@+id/report_date1"
+   			android:layout_width ="wrap_content"
+   			android:gravity="right"
+   			android:padding="5dp"
+  			android:layout_height="wrap_content"
+  			android:text=""/>
+  	<TextView 
+   			android:id="@+id/date_textview1"
+   			android:layout_width ="wrap_content"
+   			android:gravity="right"
+   			android:padding="5dp"
+  			android:layout_height="wrap_content"
+  			android:text="2011-12-03"/>
+  </TableRow>
+  
+  <TableRow>
+  	<TextView
+  			android:id= "@+id/tap_name2" 
+  			android:layout_width ="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:padding="5dp"
+  			android:textStyle="bold"
+  			android:text="Joe's Shop"/>
+    	<ImageView
+	        android:id="@+id/level2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:padding="5dp"
+	        android:src="@drawable/medium"/>
+  			
+  	<ImageView
+	        android:id="@+id/status2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="right"
+	        android:padding="5dp"
+	        android:src="@drawable/resolved"/>
+  </TableRow>
+  <TableRow>
+    <TextView
+    	 android:id="@+id/tap_problem2"
+    	 android:layout_width ="wrap_content"
+  		 android:layout_height="wrap_content"
+  		 android:padding="5dp"
+  		 android:text="Water Choking"/>
+   	<TextView 
+   			android:id="@+id/report_date2"
+   			android:layout_width ="wrap_content"
+   			android:gravity="right"
+   			android:padding="5dp"
+  			android:layout_height="wrap_content"
+  			android:text=""/>
+  	<TextView 
+   			android:id="@+id/date_textview2"
+   			android:layout_width ="wrap_content"
+   			android:gravity="right"
+   			android:padding="5dp"
+  			android:layout_height="wrap_content"
+  			android:text="2011-12-03"/>
+  </TableRow>
+ </TableLayout>

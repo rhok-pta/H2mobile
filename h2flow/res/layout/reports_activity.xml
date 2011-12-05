@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  
+  >
+  
+  	<TextView 
+			android:id="@+id/area_view"
+			android:text="@string/area" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textStyle="bold">	
+	</TextView>	
+	<TextView 
+			android:text="@string/empty" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">	
+	</TextView>	
+  	<TextView 
+			android:text="Problematic Tap" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textStyle="bold">
+			
+	</TextView>		
+    <Spinner 
+    		 android:layout_height="wrap_content" 
+    		 android:id="@+id/watertap" 
+    		 android:layout_width="match_parent"
+    		 android:prompt="@string/prompt_spinner_tap">
+    </Spinner>
+    <TextView 
+			android:text="Problem Type" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textStyle="bold"
+			>
+	</TextView>	
+    <Spinner android:id="@+id/reports" 
+    		 android:layout_height="wrap_content" 
+    		 android:layout_width="match_parent" 
+    		 android:prompt="@string/prompt_spinner_reports">
+    </Spinner>
+    <TextView 
+			android:text="Comments"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">		
+	</TextView>	
+	<EditText 
+			android:layout_height="wrap_content" 
+			android:id="@+id/comments" 
+			android:layout_width="match_parent" 
+			android:hint="Enter comments"
+			android:text="" 
+			android:singleLine="false">	
+	</EditText>
+	<Button android:text="@string/report_button" 
+			android:id="@+id/report_button" 
+			android:gravity="center"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">
+	</Button>
+  </LinearLayout>

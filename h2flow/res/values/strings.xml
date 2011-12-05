@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">H20 Flow - Rural Community Watch</string>
+    <string name="report_button">Report Water Tap</string>
+    <string name="reportsDetailsView">Reports</string>
+    <string name="statusDetailsView">Status</string>
+    <string name="area">Monitored Area:[]</string>
+    <string name="prompt_spinner_tap">Problematic Tap</string>
+    <string name="prompt_spinner_reports">Problem Type</string>
+    <string name="ok">Ignore</string>
+    <string name="empty"></string>
+ </resources>
